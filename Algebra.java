@@ -177,6 +177,27 @@ public class Algebra {
             }
             }
 
+
+            for (int j = 1; j > b; j--) //negatives
+            {
+             sum = times(a, j);
+    
+            if (sum > b) 
+            {
+              count ++;             
+            } 
+            if (sum == b) 
+            {
+              count ++;
+              return count;
+            }
+            if (sum < b)
+            {
+                count++;
+                return count;
+            }
+            }
+
             }  
             return count;
         }
@@ -212,6 +233,11 @@ public class Algebra {
     // Returns the integer part of sqrt(x) 
     public static int sqrt (int x) {
         int answer = 0;
+         
+        if (x == 1)
+        {
+            answer = 1;
+        }
 
         for (int i =1; i < x; i++)
         {
