@@ -149,10 +149,10 @@ public class Algebra {
             if (sum == a) 
             {
               count ++;
-              return count;
+              return count; 
             }
             if (sum > a)
-            {
+            { 
                 return count;
             }
             }
