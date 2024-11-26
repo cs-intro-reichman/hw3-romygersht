@@ -150,7 +150,7 @@ public class Algebra {
             {
               count ++;
               return count; 
-            }
+            } 
             if (sum > a)
             { 
                 return count;
