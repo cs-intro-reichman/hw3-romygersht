@@ -47,12 +47,11 @@ public class LoanCalc {
     public static double bruteForceSolver(double loan, double rate, int n, double epsilon) {
 
 	iterationCounter = 0;
-	double periodicalPayment = loan/n;
-    double increse = 0.001;
+	double periodicalPayment = (loan/n);
 
-	while (Math.abs((endBalance(loan, rate, n, periodicalPayment))) >= epsilon) {
+	while ((endBalance(loan, rate, n, periodicalPayment)) > 0) {
 		iterationCounter++;
-		periodicalPayment+= increse;
+		periodicalPayment+= epsilon;
 	} 
 		return periodicalPayment;
 	}
