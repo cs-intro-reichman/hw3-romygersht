@@ -11,7 +11,7 @@ public class TestAlgebra {
         testMinus();
         testTimes();
         testPow();
-        testDiv();
+        testDiv(); 
         testMod();
         testSqrt();
         testForbiddenOperators();
