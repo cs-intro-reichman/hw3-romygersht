@@ -4,7 +4,7 @@
 // return int values.
 
 public class Algebra {
-	public static void main(String args[]) {
+	public static void main(String args[]) { 
 	    // Tests some of the operations
 	    System.out.println(plus(2,3));   // 2 + 3
 	    System.out.println(minus(7,2));  // 7 - 2
@@ -123,7 +123,48 @@ public class Algebra {
     // Returns the integer part of x1 / x2 
     public static int div(int a, int b) {
 
+      if (a<0 && b<0) {
+        a = minus(0,a);
+        b = minus(0,b);
+      }
+      if (b>a && a>0) {
+       return 0;
+      }
+
+      if (a<0) {
+        a = minus (0,a);
+        int x = b;
         int sum = 1;
+          
+           while (minus(a,x)>=b){ //
+            x=plus(x,b);
+            sum++;
+           }
+        return minus(0,sum);
+      }
+      if (b<0) {
+        b = minus (0,b);
+        int x = b;
+        int sum = 1;
+          
+           while (minus(a,x)>=b){
+            x=plus(x,b);
+            sum++;
+           }
+        return minus(0,sum);
+      }
+
+      int x = b;
+      int sum = 1;
+      while (minus(a,x)>=b){
+        x = plus(x,b);
+        sum++;
+      }
+      return sum;
+    }
+
+
+        /*int sum = 1;
         int count = 0;
 
         if (a==0 || b==0) //zero
@@ -163,18 +204,19 @@ public class Algebra {
     
             if (sum > a) 
             {
-              count ++;             
+              count++; 
+              return count;            
             } 
             if (sum == a) 
             {
-              count ++;
+              count++;
               return count;
             }
             if (sum < a)
             {
                 count++;
-                return count;
             }
+             
             }
 
 
@@ -200,7 +242,7 @@ public class Algebra {
 
             }  
             return count;
-        }
+        }*/
 
         
     

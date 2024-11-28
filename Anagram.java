@@ -86,20 +86,19 @@ public class Anagram {
 	// characters as the given string, re-arranged in a random order. 
 	public static String randomAnagram(String str) {
         
-		int Strandom = (int)Math.random()*str.length(); 
+		int Strandom1 = (int)Math.random()*str.length(); 
+		//int Strandom2 = (int)Math.random()*str.length(); 
         String newStr = "";
-		char c = str.charAt(Strandom);
+		char c1 = str.charAt(Strandom1);
+		//char c2 = str.charAt(Strandom2);
 
 		for (int i=0; i < str.length(); i++)
 		{
-			if (str.charAt(i) != str.charAt(Strandom)) {
+			if (str.charAt(i) != str.charAt(Strandom1)) {
 				newStr += str.charAt(i);
 			}
-		//	else{
-        //       c = str.charAt(i);
-		//	}
 		}
-		newStr+= c;
+		newStr = newStr+c1;
 		return newStr;
 	}
 
