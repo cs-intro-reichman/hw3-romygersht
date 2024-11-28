@@ -122,6 +122,9 @@ public class Algebra {
 
     // Returns the integer part of x1 / x2 
     public static int div(int a, int b) {
+      if (a==0 || b==0){
+        return 0;
+      }
 
       if (a<0 && b<0) {
         a = minus(0,a);
@@ -136,7 +139,7 @@ public class Algebra {
         int x = b;
         int sum = 1;
           
-           while (minus(a,x)>=b){ //
+           while (minus(a,x)>=b){ 
             x=plus(x,b);
             sum++;
            }
