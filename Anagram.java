@@ -86,10 +86,10 @@ public class Anagram {
 	// characters as the given string, re-arranged in a random order. 
 	public static String randomAnagram(String str) {
 		String newStr ="";
-		double length = (double)str.length();
+		double length = str.length();
 
 		for (int i = 0; i < length; i ++){
-			int random = (int)(Math.random()*length);
+			int random = (int)(Math.random()*(double)str.length());
 			char c = str.charAt(random);
 			newStr += c;
 			String fStr = str.substring(0, random);
@@ -97,21 +97,6 @@ public class Anagram {
 		}
 		return newStr;
 	}
-		/*int Strandom1 = (int)Math.random()*str.length(); 
-		//int Strandom2 = (int)Math.random()*str.length(); 
-        String newStr = "";
-		char c1 = str.charAt(Strandom1);
-		//char c2 = str.charAt(Strandom2);
-
-		for (int i=0; i < str.length(); i++)
-		{
-			if (str.charAt(i) != str.charAt(Strandom1)) {
-				newStr += str.charAt(i);
-			}
-		}
-		newStr = newStr+c1;
-		return newStr;
-	}*/
 
 	
 	public static String preProcess1(String str) {
